@@ -1,0 +1,43 @@
+def arb_args(*args):
+    for i in args:
+        print(i)
+        
+arb_args('a','b','c','d')
+
+def inner_func(a,b):
+    def add():
+        return a+b
+        
+    def sub():
+        return a-b
+    
+    comb = add() + sub()
+    
+    return print(comb)
+    
+inner_func(1,2)
+
+def lunch_lady(name, lunch):
+    if len(lunch) == 0:
+        print(f"{name}, Mystery Meat")
+    else:
+        print(f"{name}, {lunch}")
+        
+lunch_lady('natalia','pasta')
+
+def sum_n_product(a,b):
+    return a+b, a*b
+    
+print(sum_n_product(2,3))
+
+
+alias_arb_args = arb_args
+
+
+def arb_mean(*args):
+    total = 0
+    for x in args:
+        total += x
+    print(x/len(args))
+    
+arb_mean(2,3)
